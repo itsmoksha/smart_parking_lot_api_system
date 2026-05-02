@@ -45,14 +45,19 @@ A centralized backend system for managing parking slot allocation, tracking vehi
 
 ### Slot Management
 - `POST /api/slots/initialize`: Initialize slots. Body: `{ "count": 10 }`
+  ![Initializing Slots](screenshots/initialize_slots.png)
 - `GET /api/slots`: View all slots.
 - `GET /api/slots/available`: View currently available slots.
 
 ### Parking Operations
 - `POST /api/parking/entry`: Register vehicle entry. Body: `{ "numberPlate": "ABC-1234" }`
+  ![Vehicle Entry](screenshots/vehicle_entry.png)
 - `POST /api/parking/exit`: Register vehicle exit. Body: `{ "numberPlate": "ABC-1234" }`
+  ![Vehicle Exit](screenshots/vehicle_exit.png)
 - `GET /api/parking/status`: View currently parked vehicles.
+  ![Parking Status](screenshots/parking_status.png)
 - `GET /api/parking/history`: View all parking records.
+  ![Parking History](screenshots/parking_history.png)
 - `GET /api/parking/vehicle/:numberPlate`: Search history by plate number.
 
 ### Maintenance
@@ -63,3 +68,4 @@ A centralized backend system for managing parking slot allocation, tracking vehi
 2. Initialize slots using `POST /api/slots/initialize`.
 3. Test Entry/Exit flows.
 4. Verify results using Status and History endpoints.
+
